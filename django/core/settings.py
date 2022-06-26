@@ -1,7 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
 import os
-
+import django_heroku
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'apuvicmef^(!j8gx&clu0u(!8m0r^etok^l0)kc!---#(i5=dt'
 DEBUG = True
@@ -169,3 +169,6 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email'
 }
 SOCIAL_AUTH_USER_FIELDS = ['email', 'username', 'first_name', 'password']
+
+
+django_heroku.settings(locals())
